@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --container: 1100px;
+}
+
+.container {
+  @apply mx-auto px-4;
+  max-width: var(--container);
+}
+
+.section {
+  @apply py-16 md:py-20;
+}
+
+.card {
+  @apply rounded-2xl border border-neutral-200 bg-white shadow-sm;
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm;
+}
+
+.button {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium border;
+}
+
+.nav-link {
+  @apply text-sm md:text-base hover:opacity-80 transition-opacity;
+}
+
+/* Simple caret blink for typewriter */
+.caret::after {
+  content: "|";
+  animation: blink 1s steps(1, end) infinite;
+  margin-left: 2px;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
